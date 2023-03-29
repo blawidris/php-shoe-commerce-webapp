@@ -44,11 +44,16 @@ $products = getAllProduct();
 <?php 
 	
 	include_once './partials/header.php'; 
-	$pageTitle = 'Shop';
+	$data = [
+		'pageTitle' => 'Shop',
+		'subtitle' => 'Product Categories',
+		'link' => 'category.php'
+	];
+	
 	/**
-	 * @return $pageTitle
+	 * @return array $data
 	 */
-
+	
 	 // banner
 	include_once './partials/banner.php';
 

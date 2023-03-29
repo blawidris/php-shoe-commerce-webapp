@@ -51,11 +51,9 @@ $singleProduct = getById($prodId);
 		'subtitle' => 'Product Detail Page',
 		'link' => 'category.php'
 	];
-	$subtitle = '';
-	$pageTitle = '';
+	
 	/**
-	 * @return $pageTitle
-	 * @return $subtitle
+	 * @return array $data
 	 */
 
 	// banner
