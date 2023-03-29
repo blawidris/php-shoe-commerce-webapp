@@ -1,0 +1,61 @@
+{
+  "products": [
+    {
+      "name": "Adidas Ultraboost 21",
+      "price": "$180",
+      "available": "In stock",
+      "description": "The Adidas Ultraboost 21 is a comfortable and responsive shoe, designed for running and training. It features Boost cushioning technology and a Primeknit upper for a snug fit.",
+      "category": "Running shoes",
+      "image": "img/product/p1.jpg"
+    },
+    {
+      "name": "Adidas Stan Smith",
+      "price": "$80",
+      "available": "In stock",
+      "description": "The Adidas Stan Smith is a classic and timeless shoe, known for its simple design and clean lines. It features a leather upper and a rubber outsole.",
+      "category": "Casual shoes",
+      "image": "img/product/p3.jpg"
+    },
+    {
+      "name": "Adidas NMD_R1",
+      "price": "$140",
+      "available": "In stock",
+      "description": "The Adidas NMD_R1 is a stylish and versatile shoe, designed for everyday wear. It features a knit upper and Boost cushioning for comfort and support.",
+      "category": "Lifestyle shoes",
+      "image": "img/product/p4.jpg"
+    },
+    {
+      "name": "Adidas Adilette Cloudfoam Plus",
+      "price": "$35",
+      "available": "In stock",
+      "description": "The Adidas Adilette Cloudfoam Plus is a comfortable and lightweight slide, perfect for after a workout or for casual wear. It features a Cloudfoam Plus footbed for a plush feel.",
+      "category": "Slides",
+      "image": "img/product/p5.jpg"
+    },
+    {
+      "name": "Adidas Ultraboost DNA CC",
+      "price": "$180",
+      "available": "Out of stock",
+      "description": "The Adidas Ultraboost DNA CC is a lightweight and breathable shoe, designed for running and training in warm weather. It features a Primeknit upper and a Continental rubber outsole.",
+      "category": "Running shoes",
+      "image": "img/product/p6.jpg"
+    },
+    {
+      "name": "Adidas Superstar",
+      "price": "$85",
+      "available": "In stock",
+      "description": "The Adidas Superstar is a classic and iconic shoe, known for its distinctive shell toe and three stripes. It features a leather upper and a rubber outsole.",
+      "category": "Casual shoes",
+      "image": "img/product/p7.jpg"
+    },
+    {
+      "name": "Adidas Adizero Boston 10",
+      "price": "$140",
+      "available": "In stock",
+      "description": "The Adidas Adizero Boston 10 is a lightweight and responsive shoe, designed for fast-paced runs and races. It features a Boost midsole and a breathable mesh upper.",
+      "category": "Running shoes",
+      "image": "img/product/p8.jpg"
+    }
+  ],
+  "categories":[]
+}
