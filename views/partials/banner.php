@@ -8,7 +8,7 @@
                     <a href="#"><?= $data['pageTitle']; ?><span class="lnr lnr-arrow-right <?php echo empty($data['subtitle']) ? 'd-none' : '';?>"></span></a>
 
                     <?php if (!empty($data['subtitle'])) { ?>
-                        <a href="<?= $data['sub_link']; ?>"><?= $subtitle ?></a>
+                        <a href="<?= $data['sub_link']; ?>"><?= $data['subtitle'] ?></a>
                     <?php } ?>
                     
                 </nav>
