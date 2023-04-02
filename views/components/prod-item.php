@@ -10,9 +10,9 @@
 				</div>
 				<div class="prd-bottom">
 
-					<a href="" class="social-info">
+					<a href="javascript:void(0)" class="social-info">
 						<span class="ti-bag"></span>
-						<p class="hover-text">add to bag</p>
+						<p class="hover-text" id="addToCart" data-name="<?= $item->name; ?>" data-quantity="1" data-image="<?= $item->image; ?>" data-price="<?= $item->price; ?>">add to bag</p>
 					</a>
 					<a href="" class="social-info">
 						<span class="lnr lnr-heart"></span>

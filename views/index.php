@@ -600,7 +600,7 @@ $products = getAllProduct();
 	<!-- End exclusive deal Area -->
 
 	<!-- Start brand Area -->
-	<section class="brand-area section_gap">
+	<!-- <section class="brand-area section_gap">
 		<div class="container">
 			<div class="row">
 				<a class="col single-img" href="#">
@@ -620,11 +620,29 @@ $products = getAllProduct();
 				</a>
 			</div>
 		</div>
-	</section>
+	</section> -->
 	<!-- End brand Area -->
 
 	<?php include_once './partials/footer.php'; ?>
 
+	<script>
+		const addBtn = document.querySelectorAll('#addToCart');
+
+		addBtn.forEach((element, index)=>{
+			element.addEventListener('click', function(e){
+				e.preventDefault();
+
+				let productName = this.getAttribute('data-name');
+				let productPrice = this.getAttribute('data-image');
+				let productImage = this.getAttribute('data-price');
+				let productQuantity = this.getAttribute('data-quantity');
+
+			
+				let countTxt = document.getElementsByClassName('.count');
+
+			})
+		})
+	</script>
 </body>
 
 </html>
