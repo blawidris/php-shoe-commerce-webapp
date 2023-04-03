@@ -231,7 +231,7 @@ $products = getAllProduct();
 					<?php foreach ($products as $key => $item) {
 						/** 
 						 * @return array $item 
-						 * @return int $key
+						 * @return int $key + 1
 						 */
 
 						include 'components/prod-item.php';
@@ -632,6 +632,7 @@ $products = getAllProduct();
 			element.addEventListener('click', function(e){
 				e.preventDefault();
 
+				let productId = this.getAttribute('data-id');
 				let productName = this.getAttribute('data-name');
 				let productPrice = this.getAttribute('data-image');
 				let productImage = this.getAttribute('data-price');
@@ -639,6 +640,8 @@ $products = getAllProduct();
 
 			
 				let countTxt = document.getElementsByClassName('.count');
+
+				console.log(productId)
 
 			})
 		})

@@ -21,6 +21,7 @@ function getById($prodId)
     foreach ($products as $id => $item) {
         if ($prodId == $id) {
 
+            $singleProduct['id'] = $prodId;
             $singleProduct['name'] = $item->name;
             $singleProduct['price'] = $item->price;
             $singleProduct['image'] = $item->image;

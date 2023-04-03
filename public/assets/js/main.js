@@ -305,46 +305,11 @@ $(document).ready(function(){
 
   //------- Start Quantity Increase & Decrease Value --------//
 
+  //  let IncreaseItemBtn = document.querySelector('.product_count .increase')
+  //  let reduceItemBtn = document.querySelector('.product_count .reduce')
+  //   let qtyCount = document.querySelector('.product_count .qty');
 
-
-
-    var value,
-        quantity = document.getElementsByClassName('quantity-container');
-
-    function createBindings(quantityContainer) {
-        var quantityAmount = quantityContainer.getElementsByClassName('quantity-amount')[0];
-        var increase = quantityContainer.getElementsByClassName('increase')[0];
-        var decrease = quantityContainer.getElementsByClassName('decrease')[0];
-        increase.addEventListener('click', function () { increaseValue(quantityAmount); });
-        decrease.addEventListener('click', function () { decreaseValue(quantityAmount); });
-    }
-
-    function init() {
-        for (var i = 0; i < quantity.length; i++ ) {
-            createBindings(quantity[i]);
-        }
-    };
-
-    function increaseValue(quantityAmount) {
-        value = parseInt(quantityAmount.value, 10);
-
-        console.log(quantityAmount, quantityAmount.value);
-
-        value = isNaN(value) ? 0 : value;
-        value++;
-        quantityAmount.value = value;
-    }
-
-    function decreaseValue(quantityAmount) {
-        value = parseInt(quantityAmount.value, 10);
-
-        value = isNaN(value) ? 0 : value;
-        if (value > 0) value--;
-
-        quantityAmount.value = value;
-    }
-
-  init();
+  //   console.log(qtyCount.value);
 
 //------- End Quantity Increase & Decrease Value --------//
 

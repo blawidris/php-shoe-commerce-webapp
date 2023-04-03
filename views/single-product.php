@@ -51,7 +51,7 @@ $singleProduct = getById($prodId);
 		'subtitle' => 'Product Detail Page',
 		'link' => 'category.php'
 	];
-	
+
 	/**
 	 * @return array $data
 	 */
@@ -61,7 +61,7 @@ $singleProduct = getById($prodId);
 	?>
 	<!-- End header Area -->
 
-	
+
 
 	<!--================Single Product Area =================-->
 	<div class="product_image_area">
@@ -91,12 +91,12 @@ $singleProduct = getById($prodId);
 						<p><?= $singleProduct['description']; ?></p>
 						<div class="product_count">
 							<label for="qty">Quantity:</label>
-							<input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:" class="input-text qty">
-							<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;" class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
-							<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 1 ) result.value--;return false;" class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
+							<input type="text" name="qty" id="qty" maxlength="12" value="1" title="Quantity:" class="input-text qty">
+							<button class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
+							<button class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
 						</div>
 						<div class="card_area d-flex align-items-center">
-							<a class="primary-btn" href="#">Add to Cart</a>
+							<a class="primary-btn add-to-cart" href="javascript:void(0)" data-name="<?= $singleProduct['name']; ?>" data-quantity="1" data-image="<?= $singleProduct['image']; ?>" data-price="<?= $singleProduct['price']; ?>" data-id="<?= $singleProduct['id'] ?>">Add to Cart</a>
 							<a class="icon_btn" href="#"><i class="lnr lnr lnr-diamond"></i></a>
 							<a class="icon_btn" href="#"><i class="lnr lnr lnr-heart"></i></a>
 						</div>
@@ -420,7 +420,68 @@ $singleProduct = getById($prodId);
 	</section>
 	<!--================End Product Description Area =================-->
 
-	
+
+	<script>
+		let increaseItemBtn = document.querySelector('.product_count .increase')
+		let reduceItemBtn = document.querySelector('.product_count .reduced')
+		let qtyValue = document.querySelector('.product_count .qty');
+
+		let newQty = 1;
+
+		// increase
+		increaseItemBtn.addEventListener('click', (e) => {
+			e.preventDefault()
+
+			if (qtyValue.value >= 1) {
+				qtyValue.value++;
+
+				newQty = parseInt(qtyValue.value);
+			}
+		})
+
+		reduceItemBtn.addEventListener('click', (e) => {
+			e.preventDefault()
+
+			if (qtyValue.value > 1) {
+				qtyValue.value--;
+
+				newQty = parseInt(qtyValue.value);
+
+			}
+		})
+
+		// add to cart
+
+		let addToCartBtn = document.querySelector('.add-to-cart');
+
+		addToCartBtn.addEventListener('click', function() {
+			let productId = this.getAttribute('data-id');
+			let productName = this.getAttribute('data-name');
+			let productPrice = this.getAttribute('data-image');
+			let productImage = this.getAttribute('data-price');
+			let productQuantity = this.getAttribute('data-quantity');
+			productQuantity.text = newQty;
+
+			let obj = {
+				id: productId,
+				name: productName,
+				price: productPrice,
+				image: productImage,
+				quantity: newQty,
+			}
+
+			$.ajax({
+				url: '<?php echo CONTROLLER_PATH?>add_product.php',
+				type: 'POST',
+				data: JSON.stringify(obj),
+				success: function(response){
+
+				}
+			})
+			console.log(obj)
+
+		});
+	</script>
 
 	<!-- start footer Area -->
 	<?php include_once './partials/footer.php'; ?>
