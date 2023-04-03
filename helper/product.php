@@ -33,3 +33,4 @@ function getById($prodId)
 
     return $singleProduct;
 }
+

@@ -33,7 +33,7 @@
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li class="nav-item"><a href="login.php" class="user"><span class="ti-user"></span></a></li>
-						<li class="nav-item"><a href="cart.php" class="cart position-relative"><span class="ti-bag"></span><span class="count rounded-circle position-absolute">0</span></span></a></li>
+						<li class="nav-item"><a href="cart.php" class="cart position-relative"><span class="ti-bag"></span><span class="count rounded-circle position-absolute"><?php echo !empty($_SESSION['cart_item']) ? count($_SESSION['cart_item']) : 0 ?></span></span></a></li>
 						<li class="nav-item">
 							<button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
 						</li>

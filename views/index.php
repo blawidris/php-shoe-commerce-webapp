@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 include_once dirname(__DIR__) . '/config/bootstrap.php';
 
 $products = getAllProduct();
@@ -628,8 +629,8 @@ $products = getAllProduct();
 	<script>
 		const addBtn = document.querySelectorAll('#addToCart');
 
-		addBtn.forEach((element, index)=>{
-			element.addEventListener('click', function(e){
+		addBtn.forEach((element, index) => {
+			element.addEventListener('click', function(e) {
 				e.preventDefault();
 
 				let productId = this.getAttribute('data-id');
@@ -638,10 +639,30 @@ $products = getAllProduct();
 				let productImage = this.getAttribute('data-price');
 				let productQuantity = this.getAttribute('data-quantity');
 
-			
-				let countTxt = document.getElementsByClassName('.count');
+				let obj = {
+					id: productId,
+					name: productName,
+					price: productPrice,
+					image: productImage,
+					quantity: productQuantity,
+				}
 
-				console.log(productId)
+				$.ajax({
+					url: '<?= CONTROLLER_PATH ?>add_cart.php',
+					type: 'POST',
+					data: {
+						cart: JSON.stringify(obj)
+					},
+					success: function(response) {
+
+						let cartCount = document.querySelector('.cart .count');
+
+						if (response.status == 200)
+							cartCount.innerHTML = response.total_item;
+						alert('item added to cart');
+
+					}
+				});
 
 			})
 		})

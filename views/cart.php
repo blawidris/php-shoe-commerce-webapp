@@ -1,45 +1,45 @@
 <?php
 
- include_once dirname(__DIR__).'/config/bootstrap.php';
+include_once dirname(__DIR__) . '/config/bootstrap.php';
 
- ?>
+?>
 
 <!DOCTYPE html>
 <html lang="zxx" class="no-js">
 
 <head>
-	<!-- Mobile Specific Meta -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<!-- Favicon-->
-	<link rel="shortcut icon" href="<?=ASSETS_PATH;?>img/fav.png">
-	<!-- Author Meta -->
-	<meta name="author" content="CodePixar">
-	<!-- Meta Description -->
-	<meta name="description" content="">
-	<!-- Meta Keyword -->
-	<meta name="keywords" content="">
-	<!-- meta character set -->
-	<meta charset="UTF-8">
-	<!-- Site Title -->
-	<title>Karma Shop</title>
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="<?= ASSETS_PATH; ?>img/fav.png">
+    <!-- Author Meta -->
+    <meta name="author" content="CodePixar">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>Karma Shop</title>
 
 
-	<link rel="stylesheet" href="<?=ASSETS_PATH;?>css/linearicons.css">
-	<link rel="stylesheet" href="<?=ASSETS_PATH;?>css/font-awesome.min.css">
-	<link rel="stylesheet" href="<?=ASSETS_PATH;?>css/themify-icons.css">
-	<link rel="stylesheet" href="<?=ASSETS_PATH;?>css/bootstrap.css">
-	<link rel="stylesheet" href="<?=ASSETS_PATH;?>css/owl.carousel.css">
-	<link rel="stylesheet" href="<?=ASSETS_PATH;?>css/nice-select.css">
-	<link rel="stylesheet" href="<?=ASSETS_PATH;?>css/nouislider.min.css">
-	<link rel="stylesheet" href="<?=ASSETS_PATH;?>css/ion.rangeSlider.css" />
-	<link rel="stylesheet" href="<?=ASSETS_PATH;?>css/ion.rangeSlider.skinFlat.css" />
-	<link rel="stylesheet" href="<?=ASSETS_PATH;?>css/magnific-popup.css">
-	<link rel="stylesheet" href="<?=ASSETS_PATH;?>css/main.css">
+    <link rel="stylesheet" href="<?= ASSETS_PATH; ?>css/linearicons.css">
+    <link rel="stylesheet" href="<?= ASSETS_PATH; ?>css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?= ASSETS_PATH; ?>css/themify-icons.css">
+    <link rel="stylesheet" href="<?= ASSETS_PATH; ?>css/bootstrap.css">
+    <link rel="stylesheet" href="<?= ASSETS_PATH; ?>css/owl.carousel.css">
+    <link rel="stylesheet" href="<?= ASSETS_PATH; ?>css/nice-select.css">
+    <link rel="stylesheet" href="<?= ASSETS_PATH; ?>css/nouislider.min.css">
+    <link rel="stylesheet" href="<?= ASSETS_PATH; ?>css/ion.rangeSlider.css" />
+    <link rel="stylesheet" href="<?= ASSETS_PATH; ?>css/ion.rangeSlider.skinFlat.css" />
+    <link rel="stylesheet" href="<?= ASSETS_PATH; ?>css/magnific-popup.css">
+    <link rel="stylesheet" href="<?= ASSETS_PATH; ?>css/main.css">
 </head>
 
 <body>
 
-<?php include_once './partials/header.php'; ?>
+    <?php include_once './partials/header.php'; ?>
 
     <!-- Start Banner Area -->
     <section class="banner-area organic-breadcrumb">
@@ -88,12 +88,9 @@
                                 </td>
                                 <td>
                                     <div class="product_count">
-                                        <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:"
-                                            class="input-text qty">
-                                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
-                                            class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
-                                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
-                                            class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
+                                        <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:" class="input-text qty">
+                                        <button class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
+                                        <button class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
                                     </div>
                                 </td>
                                 <td>
@@ -116,12 +113,9 @@
                                 </td>
                                 <td>
                                     <div class="product_count">
-                                        <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:"
-                                            class="input-text qty">
-                                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
-                                            class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
-                                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
-                                            class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
+                                        <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:" class="input-text qty">
+                                        <button class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
+                                        <button class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></buttonp;>
                                     </div>
                                 </td>
                                 <td>
@@ -144,12 +138,9 @@
                                 </td>
                                 <td>
                                     <div class="product_count">
-                                        <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:"
-                                            class="input-text qty">
-                                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
-                                            class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
-                                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
-                                            class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
+                                        <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:" class="input-text qty">
+                                        <button class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
+                                        <button class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
                                     </div>
                                 </td>
                                 <td>
@@ -246,7 +237,44 @@
         </div>
     </section>
     <!--================End Cart Area =================-->
+
+
+    <script>
+        let increaseItemBtn = document.querySelectorAll('.product_count .increase')
+        let reduceItemBtn = document.querySelectorAll('.product_count .reduced')
+        let qtyValue = document.querySelector('.product_count .qty');
+
+        let newQty = 1;
+
+        console.log(increaseItemBtn)
+
+
+        // increase
+        increaseItemBtn.foreach((elem, index) => {
+            elem.addEventListener('click', (e) => {
+                e.preventDefault()
+
+                if (qtyValue.value >= 1) {
+                    qtyValue.value++;
+
+                    newQty = parseInt(qtyValue.value);
+                }
+            });
+        })
+
+        // reduceItemBtn.addEventListener('click', (e) => {
+        //     e.preventDefault()
+
+        //     if (qtyValue.value > 1) {
+        //         qtyValue.value--;
+
+        //         newQty = parseInt(qtyValue.value);
+
+        //     }
+        // })
+    </script>
     <?php include_once './partials/footer.php'; ?>
 
 </body>
+
 </html>

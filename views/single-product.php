@@ -1,10 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
+session_start();
+
 include_once dirname(__DIR__) . '/config/bootstrap.php';
 
 $prodId = $_GET['id'];
 
 $singleProduct = getById($prodId);
+
+var_dump($_SESSION['cart_item']);
 
 ?>
 
@@ -471,14 +477,19 @@ $singleProduct = getById($prodId);
 			}
 
 			$.ajax({
-				url: '<?php echo CONTROLLER_PATH?>add_product.php',
+				url: '<?=CONTROLLER_PATH?>add_cart.php',
 				type: 'POST',
-				data: JSON.stringify(obj),
-				success: function(response){
+				data: {cart: JSON.stringify(obj)},
+				success: function(response) {
 
+					let cartCount = document.querySelector('.cart .count');
+					
+					if(response.status == 200)
+						cartCount.innerHTML = response.total_item;
+						alert('item added to cart');
+					
 				}
 			})
-			console.log(obj)
 
 		});
 	</script>
