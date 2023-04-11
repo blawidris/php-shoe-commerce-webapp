@@ -1,0 +1,169 @@
+{
+  "blogs": [
+    {
+      "id": 1,
+      "title": "The Benefits of Meditation",
+      "description": "Learn about the many benefits of meditation and how it can improve your life.",
+      "image": "https://images.unsplash.com/photo-1577344718665-3e7c0c1ecf6b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format",
+      "tags": ["meditation", "mindfulness", "self-improvement"],
+      "category": "Personal Development",
+      "author": "John Smith",
+      "created_date": "2022-03-01",
+      "total_views": 1000
+    },
+    {
+      "id": 2,
+      "title": "How to Make the Perfect Cup of Coffee",
+      "description": "Discover the secrets to making the perfect cup of coffee at home.",
+      "image": "https://images.unsplash.com/photo-1511816868748-35a25b1148c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format",
+      "tags": ["coffee", "beverages", "homebrewing"],
+      "category": "Food and Drink",
+      "author": "Jane Doe",
+      "created_date": "2022-03-03",
+      "total_views": 1500
+    },
+    {
+      "id": 3,
+      "title": "The Science of Sleep",
+      "description": "Explore the latest scientific research on the importance of sleep and how to improve your sleep habits.",
+      "image": "https://images.unsplash.com/photo-1531353826977-0941b4779a1c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format",
+      "tags": ["sleep", "health", "wellness"],
+      "category": "Health and Wellness",
+      "author": "David Johnson",
+      "created_date": "2022-03-05",
+      "total_views": 2000
+    },
+    {
+      "id": 4,
+      "title": "10 Simple Ways to Reduce Stress",
+      "description": "Learn easy and effective techniques for reducing stress and promoting relaxation.",
+      "image": "https://images.unsplash.com/photo-1493836512294-502baa1986e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format",
+      "tags": ["stress", "anxiety", "self-care"],
+      "category": "Personal Development",
+      "author": "Sarah Lee",
+      "created_date": "2022-03-07",
+      "total_views": 800
+    },
+    {
+      "id": 5,
+      "title": "Exploring the Outdoors: A Beginner's Guide to Hiking",
+      "description": "Discover the joys of hiking and learn how to get started with this beginner's guide.",
+      "image": "https://example.com/images/hiking.jpg",
+      "tags": ["hiking", "outdoors", "nature"],
+      "category": "Travel and Adventure",
+      "author": "Mike Chen",
+      "created_date": "2022-03-10",
+      "total_views": 1200
+    },
+    {
+      "id": 6,
+      "title": "The Art of Public Speaking",
+      "description": "Master the art of public speaking with these tips and techniques.",
+      "image": "https://example.com/images/public-speaking.jpg",
+      "tags": ["public speaking", "communication", "self-improvement"],
+      "category": "Personal Development",
+      "author": "Laura Kim",
+      "created_date": "2022-03-12",
+      "total_views": 500
+    },
+    {
+      "id": 7,
+      "title": "The Benefits of Yoga",
+      "description": "Discover the many physical and mental health benefits of practicing yoga.",
+      "image": "https://example.com/images/yoga.jpg",
+      "tags": ["yoga", "health", "wellness"],
+      "category": "Health and Wellness",
+      "author": "Laura Kim",
+      "created_date": "2022-03-12",
+      "total_views": 500
+    },
+    {
+        "id": 7,
+        "title": "The Importance of Regular Exercise",
+        "description": "Regular exercise is crucial for maintaining a healthy body and mind. In this blog post, we'll explore the benefits of exercise and provide tips for getting started.",
+        "image": "https://example.com/exercise.jpg",
+        "tags": ["health", "fitness"],
+        "category": "Health",
+        "author": "Jane Smith",
+        "created_date": "2022-01-01",
+        "total_views": 1000
+    },
+    {
+        "id": 8,
+        "title": "The Future of Artificial Intelligence",
+        "description": "Artificial intelligence is rapidly advancing, and its impact on society is immense. In this blog post, we'll explore the potential benefits and risks of AI, and discuss how it may shape our future.",
+        "image": "https://images.unsplash.com/photo-1591696331111-ef9586a5b17a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format",
+        "tags": ["technology", "future"],
+        "category": "Technology",
+        "author": "Jane Smith",
+        "created_date": "2022-03-10",
+        "total_views": 2000
+    },
+    {
+        "id": 9,
+        "title": "The Power of Positive Thinking",
+        "description": "Positive thinking can have a profound impact on our lives, improving our mental and physical health. In this blog post, we'll explore the science behind positive thinking and provide tips for cultivating a more positive mindset.",
+        "image": "https://plus.unsplash.com/premium_photo-1661541193023-12bbb6c8e75c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8",
+        "tags": ["self-improvement", "mindfulness"],
+        "category": "Self-Improvement",
+        "author": "John Doe",
+        "created_date": "2022-04-20",
+        "total_views": 500
+    },
+    {
+        "id": 10,
+        "title": "The Benefits of Travel",
+        "description": "Travel can broaden our horizons, expose us to new cultures, and provide a much-needed break from our daily routines. In this blog post, we'll explore the benefits of travel and provide tips for planning your next adventure.",
+        "image": "https://images.unsplash.com/photo-1488085061387-422e29b40080?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format",
+        "tags": ["travel", "adventure"],
+        "category": "Lifestyle",
+        "author": "Jane Smith",
+        "created_date": "2022-05-05",
+        "total_views": 1500
+    },
+    {
+        "id": 11,
+        "title": "10 Tips for Productive Remote Work",
+        "description": "Working from home can be challenging. Use these tips to increase your productivity and improve your work-life balance.",
+        "image": "https://example.com/images/remote-work.jpg",
+        "tags": ["remote work", "productivity", "work-life balance"],
+        "category": "Career",
+        "author": "Jane Smith",
+        "createdDate": "2022-04-01",
+        "totalViews": 1000
+      },
+      {
+        "id": 12,
+        "title": "The Benefits of a Plant-Based Diet",
+        "description": "Discover the numerous benefits of adopting a plant-based diet.",
+        "image": "https://example.com/images/plant-based-diet.jpg",
+        "tags": ["health", "nutrition", "plant-based diet"],
+        "category": "Health and Wellness",
+        "author": "Mary Brown",
+        "createdDate": "2022-06-05",
+        "totalViews": 1200
+      },
+      {
+        "id": 13,
+        "title": "10 Ways to Improve Your Memory",
+        "description": "Use these techniques to improve your memory and boost your brain power.",
+        "image": "https://images.unsplash.com/photo-1519682577862-22b62b24e493?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format",
+        "tags": ["memory", "brain power", "productivity"],
+        "category": "Self-Improvement",
+        "author": "Tom Wilson",
+        "createdDate": "2022-07-23",
+        "totalViews": 900
+      },
+      {
+        "id": 14,
+        "title": "The Importance of Networking for Career Success",
+        "description": "Learn why networking is critical for career success and how to do it effectively.",
+        "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format",
+        "tags": ["career", "networking", "professional development"],
+        "category": "Career",
+        "author": "Jessica Lee",
+        "createdDate": "2022-08-11",
+        "totalViews": 600
+      }
+  ]
+}
