@@ -10,7 +10,7 @@ $prodId = $_GET['id'];
 
 $singleProduct = getById($prodId);
 
-var_dump($_SESSION['cart_item']);
+// var_dump($_SESSION['cart_item']);
 
 ?>
 

@@ -27,6 +27,7 @@ function addItem($data)
     );
 
     if (empty($_SESSION['cart_item'])) {
+        // create cart session
         $_SESSION['cart_item'] = $itemArray;
         return;
     }

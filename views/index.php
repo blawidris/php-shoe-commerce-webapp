@@ -658,8 +658,12 @@ $products = getAllProduct();
 						let cartCount = document.querySelector('.cart .count');
 
 						if (response.status == 200)
+						{
+							// console.log(response);
 							cartCount.innerHTML = response.total_item;
-						alert('item added to cart');
+							alert('item added to cart');
+						}
+							
 
 					}
 				});
