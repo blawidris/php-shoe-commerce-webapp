@@ -76,13 +76,13 @@ $singleProduct = getById($prodId);
 				<div class="col-lg-6">
 					<div class="s_Product_carousel">
 						<div class="single-prd-item">
-							<img class="img-fluid" src="<?= ASSETS_PATH . $singleProduct['image'] ?>" alt="">
+							<img class="img-fluid" src="<?= $singleProduct['image'][0] ?>" alt="">
 						</div>
 						<div class="single-prd-item">
-							<img class="img-fluid" src="<?= ASSETS_PATH . $singleProduct['image'] ?>" alt="">
+							<img class="img-fluid" src="<?= $singleProduct['image'][1] ?>" alt="">
 						</div>
 						<div class="single-prd-item">
-							<img class="img-fluid" src="<?= ASSETS_PATH . $singleProduct['image'] ?>" alt="">
+							<img class="img-fluid" src="<?= $singleProduct['image'][2] ?>" alt="">
 						</div>
 					</div>
 				</div>
@@ -92,9 +92,9 @@ $singleProduct = getById($prodId);
 						<h2><?= $singleProduct['price']; ?></h2>
 						<ul class="list">
 							<li><a class="active" href="#"><span>Category</span> : <?= $singleProduct['category']; ?></a></li>
-							<li><a href="#"><span>Availibility</span> : <?= $singleProduct['available']; ?></a></li>
+							<li><a href="#"><span>Availibility</span> : <?= $singleProduct['available'] ? 'In Stock' : 'Out of Stock'; ?></a></li>
 						</ul>
-						<p><?= $singleProduct['description']; ?></p>
+						<p><?= trim_text($singleProduct['description']); ?></p>
 						<div class="product_count">
 							<label for="qty">Quantity:</label>
 							<input type="text" name="qty" id="qty" maxlength="12" value="1" title="Quantity:" class="input-text qty">
@@ -102,7 +102,7 @@ $singleProduct = getById($prodId);
 							<button class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
 						</div>
 						<div class="card_area d-flex align-items-center">
-							<a class="primary-btn add-to-cart" href="javascript:void(0)" data-name="<?= $singleProduct['name']; ?>" data-quantity="1" data-image="<?= $singleProduct['image']; ?>" data-price="<?= $singleProduct['price']; ?>" data-id="<?= $singleProduct['id'] ?>">Add to Cart</a>
+							<a class="primary-btn add-to-cart" href="javascript:void(0)" data-name="<?= $singleProduct['name']; ?>" data-quantity="1" data-image="<?= $singleProduct['image'][0]; ?>" data-price="<?= $singleProduct['price']; ?>" data-id="<?= $singleProduct['id'] ?>">Add to Cart</a>
 							<a class="icon_btn" href="#"><i class="lnr lnr lnr-diamond"></i></a>
 							<a class="icon_btn" href="#"><i class="lnr lnr lnr-heart"></i></a>
 						</div>
@@ -463,8 +463,8 @@ $singleProduct = getById($prodId);
 		addToCartBtn.addEventListener('click', function() {
 			let productId = this.getAttribute('data-id');
 			let productName = this.getAttribute('data-name');
-			let productPrice = this.getAttribute('data-image');
-			let productImage = this.getAttribute('data-price');
+			let productPrice = this.getAttribute('data-price');
+			let productImage = this.getAttribute('data-image');
 			let productQuantity = this.getAttribute('data-quantity');
 			productQuantity.text = newQty;
 
@@ -477,17 +477,20 @@ $singleProduct = getById($prodId);
 			}
 
 			$.ajax({
-				url: '<?=CONTROLLER_PATH?>add_cart.php',
+				url: '<?= CONTROLLER_PATH ?>add_cart.php',
 				type: 'POST',
-				data: {cart: JSON.stringify(obj)},
+				data: {
+					cart: JSON.stringify(obj)
+				},
 				success: function(response) {
 
 					let cartCount = document.querySelector('.cart .count');
-					
-					if(response.status == 200)
+
+					if (response.status == 200) {
+						// console.log(response);
 						cartCount.innerHTML = response.total_item;
 						alert('item added to cart');
-					
+					}
 				}
 			})
 

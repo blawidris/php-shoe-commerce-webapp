@@ -229,13 +229,19 @@ $products = getAllProduct();
 					</div>
 				</div>
 				<div class="row">
-					<?php foreach ($products as $key => $item) {
+					<?php
+
+					$count = 0;
+					foreach ($products as $key => $item) {
 						/** 
-						 * @return array $item 
-						 * @return int $key + 1
+						 * @return array $item
 						 */
 
-						include 'components/prod-item.php';
+						$count += 1;
+
+						if ($count <= 8) {
+							include 'components/prod-item.php';
+						}
 					}
 					?>
 
@@ -635,8 +641,8 @@ $products = getAllProduct();
 
 				let productId = this.getAttribute('data-id');
 				let productName = this.getAttribute('data-name');
-				let productPrice = this.getAttribute('data-image');
-				let productImage = this.getAttribute('data-price');
+				let productPrice = this.getAttribute('data-price');
+				let productImage = this.getAttribute('data-image');
 				let productQuantity = this.getAttribute('data-quantity');
 
 				let obj = {
@@ -657,13 +663,12 @@ $products = getAllProduct();
 
 						let cartCount = document.querySelector('.cart .count');
 
-						if (response.status == 200)
-						{
+						if (response.status == 200) {
 							// console.log(response);
 							cartCount.innerHTML = response.total_item;
 							alert('item added to cart');
 						}
-							
+
 
 					}
 				});

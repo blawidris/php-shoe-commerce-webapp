@@ -19,12 +19,12 @@ function getById($prodId)
     $products = getAllProduct();
 
     foreach ($products as $id => $item) {
-        if ($prodId == $id) {
+        if ($prodId == $item->id) {
 
             $singleProduct['id'] = $prodId;
             $singleProduct['name'] = $item->name;
             $singleProduct['price'] = $item->price;
-            $singleProduct['image'] = $item->image;
+            $singleProduct['image'] = $item->images;
             $singleProduct['description'] = $item->description;
             $singleProduct['category'] = $item->category;
             $singleProduct['available'] = $item->available;

@@ -1,61 +1,187 @@
 {
   "products": [
     {
+      "id": 1,
+      "name": "Classic Leather Sneakers",
+      "description": "Step up your sneaker game with these classic leather sneakers. Made with high-quality materials and attention to detail, these sneakers are both stylish and comfortable. The leather upper provides durability and support, while the rubber sole offers traction and flexibility. Whether you're running errands or hitting the gym, these sneakers are sure to become your new go-to.",
+      "category": "Sneakers",
+      "price": 79.99,
+      "oldPrice": 99.99,
+      "available": true,
+      "images": [
+        "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a492d797-cd0a-487d-98c8-d3416c587f35/air-max-dawn-mens-shoes-Rg69GM.png",
+        "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/94205189-7d83-49fc-9fb8-b503e94ab668/air-max-dawn-mens-shoes-Rg69GM.png",
+        "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/842dbaa6-a2d9-427f-867b-b4716231b0b6/air-max-dawn-mens-shoes-Rg69GM.png"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Leather Dress Shoes",
+      "description": "Dress to impress with these stylish leather dress shoes. Crafted from high-quality leather and featuring a sleek design, these shoes are perfect for any formal occasion. The cushioned insole provides all-day comfort, while the durable outsole ensures long-lasting wear. Whether you're heading to a wedding or a business meeting, these dress shoes are sure to make a statement.",
+      "category": "Dress Shoes",
+      "price": 129.99,
+      "oldPrice": 149.99,
+      "available": true,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/1318/8223/products/VFLTOX167_500x.jpg",
+        "https://cdn.shopify.com/s/files/1/1318/8223/products/VFLTOX167_1.jpg",
+        "https://cdn.shopify.com/s/files/1/1318/8223/products/VFLTOX167_2.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Running Shoes",
+      "description": "Get ready to hit the pavement with these high-performance running shoes. Made with breathable mesh and a cushioned insole, these shoes are designed for comfort and support. The durable outsole provides traction and stability, while the sleek design ensures you'll look good while you're running. Whether you're a seasoned runner or just starting out, these shoes are the perfect choice.",
+      "category": "Running Shoes",
+      "price": 99.99,
+      "oldPrice": null,
+      "available": true,
+      "images": [
+        "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/77d852dd-48bf-427c-9a38-dc71229666e7/pegasus-40-womens-road-running-shoes-bF2QL9.png",
+        "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/2d85a046-1457-42f0-a49d-9c2fb2f6e4cc/pegasus-40-womens-road-running-shoes-bF2QL9.png",
+        "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/c7cb9718-41c1-4c79-b13c-ab85e4c1cf75/pegasus-40-womens-road-running-shoes-bF2QL9.png"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Nike Air Max 270 React",
+      "description": "The Nike Air Max 270 React combines two of Nike's best cushioning technologies to create a shoe that is both comfortable and stylish. The upper is made from a lightweight, breathable material that is designed to keep your feet cool and dry, while the React foam sole provides exceptional cushioning and support. Whether you're running, walking, or just need a comfortable shoe for everyday wear, the Nike Air Max 270 React is the perfect choice.",
+      "category": "Running Shoes",
+      "price": 150,
+      "oldPrice": 200,
+      "available": true,
+      "images": [
+        "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/snwpiivjisotsvvum9rx/air-max-270-react-mens-shoe-zPRv3k.png",
+        "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/rilcx0fzvvlifxbukpop/air-max-270-react-mens-shoe-zPRv3k.png",
+        "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/ysx6wtsoa88cpbemwigb/air-max-270-react-mens-shoe-zPRv3k.png"
+      ]
+    },
+    {
+      "id": 5,
       "name": "Adidas Ultraboost 21",
-      "price": "$180",
-      "available": "In stock",
-      "description": "The Adidas Ultraboost 21 is a comfortable and responsive shoe, designed for running and training. It features Boost cushioning technology and a Primeknit upper for a snug fit.",
-      "category": "Running shoes",
-      "image": "img/product/p1.jpg"
+      "description": "The Adidas Ultraboost 21 is the ultimate running shoe. With its responsive Boost cushioning, breathable Primeknit upper, and durable Continental rubber outsole, this shoe is designed to help you go the distance. Whether you're training for a marathon or just running for fun, the Ultraboost 21 will give you the support and comfort you need to reach your goals.",
+      "category": "Running Shoes",
+      "price": 180,
+      "oldPrice": 215,
+      "available": true,
+      "images": [
+        "https://assets.adidas.com/images/w_1880,f_auto,q_auto/8ae387dad29445f7a635aca601118310_9366/FY0402_01_standard.jpg",
+        "https://assets.adidas.com/images/w_1880,f_auto,q_auto/2526c89dc8bc46328d84aca60111c2b5_9366/FY0402_02_standard.jpg",
+        "https://assets.adidas.com/images/w_1880,f_auto,q_auto/f3879e890fd241dca7f7aca6011553ae_9366/FY0402_04_standard.jpg"
+      ]
     },
     {
-      "name": "Adidas Stan Smith",
-      "price": "$80",
-      "available": "In stock",
-      "description": "The Adidas Stan Smith is a classic and timeless shoe, known for its simple design and clean lines. It features a leather upper and a rubber outsole.",
-      "category": "Casual shoes",
-      "image": "img/product/p3.jpg"
+      "id": 6,
+      "name": "Classic Leather Sneakers",
+      "description": "Step up your sneaker game with these classic leather sneakers. Made with premium leather and a durable rubber sole, these sneakers are both stylish and comfortable. The sleek design and versatile color options make them the perfect addition to any outfit. Whether you're running errands or hitting the gym, these sneakers will keep you looking and feeling great.",
+      "category": "Sneakers",
+      "price": 99.99,
+      "oldPrice": 129.99,
+      "available": true,
+      "images": [
+        "https://assets.adidas.com/images/w_1880,f_auto,q_auto/ebe01e76794b4d8cbd56adc5016cdbda_9366/GW3020_01_standard.jpg",
+        "https://assets.adidas.com/images/w_1880,f_auto,q_auto/17b8f93ebfcf40ecac03adc50169a976_9366/GW3020_05_standard.jpg",
+        "https://assets.adidas.com/images/w_1880,f_auto,q_auto/1416afea9533497e9d1dadc5016b7f52_9366/GW3020_04_standard.jpg"
+      ]
     },
     {
-      "name": "Adidas NMD_R1",
-      "price": "$140",
-      "available": "In stock",
-      "description": "The Adidas NMD_R1 is a stylish and versatile shoe, designed for everyday wear. It features a knit upper and Boost cushioning for comfort and support.",
-      "category": "Lifestyle shoes",
-      "image": "img/product/p4.jpg"
+      "id": 8,
+      "name": "Classic White Sneakers",
+      "description": "These classic white sneakers are the perfect addition to any wardrobe. Made with high-quality materials, they are durable and comfortable. The white color makes them versatile and easy to match with any outfit. Whether you're going for a casual look or dressing up, these sneakers are sure to become your go-to choice.",
+      "category": "Sneakers",
+      "price": 79.99,
+      "oldPrice": 99.99,
+      "available": true,
+      "images": [
+        "https://assets.adidas.com/images/w_1880,f_auto,q_auto/54b9823fa216418db862ada9001de64d_9366/GY5434_01_standard.jpg",
+        "https://assets.adidas.com/images/w_1880,f_auto,q_auto/29808bf0f2d14b50a7e1ada9001dc5bb_9366/GY5434_02_standard_hover.jpg",
+        "https://assets.adidas.com/images/w_1880,f_auto,q_auto/27c6cfaba0ff41229886ada9001f14bc_9366/GY5434_03_standard.jpg"
+      ]
     },
     {
-      "name": "Adidas Adilette Cloudfoam Plus",
-      "price": "$35",
-      "available": "In stock",
-      "description": "The Adidas Adilette Cloudfoam Plus is a comfortable and lightweight slide, perfect for after a workout or for casual wear. It features a Cloudfoam Plus footbed for a plush feel.",
-      "category": "Slides",
-      "image": "img/product/p5.jpg"
+      "id": 9,
+      "name": "PUMA x LAMELO BALL MB.01",
+      "description": "Step up your style game with these classic PUMA x LAMELO BALL MB.01. Made with premium leather, they are both comfortable and stylish. The timeless design makes them perfect for both formal and casual occasions. Pair them with jeans for a casual look or dress them up with a suit for a more formal event.",
+      "category": "Loafers",
+      "price": 129.99,
+      "oldPrice": 149.99,
+      "available": true,
+      "images": [
+        "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_1350,h_1350/global/379217/01/sv01/fnd/PNA/fmt/png/PUMA-x-LAMELO-BALL-MB.01-Digital-Camo-Men's-Basketball-Shoes",
+        "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/379217/01/fnd/PNA/fmt/png/PUMA-x-LAMELO-BALL-MB.01-Digital-Camo-Men's-Basketball-Shoes",
+        "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/379217/01/bv/fnd/PNA/fmt/png/PUMA-x-LAMELO-BALL-MB.01-Digital-Camo-Men's-Basketball-Shoes"
+      ]
     },
     {
-      "name": "Adidas Ultraboost DNA CC",
-      "price": "$180",
-      "available": "Out of stock",
-      "description": "The Adidas Ultraboost DNA CC is a lightweight and breathable shoe, designed for running and training in warm weather. It features a Primeknit upper and a Continental rubber outsole.",
-      "category": "Running shoes",
-      "image": "img/product/p6.jpg"
+      "id": 10,
+      "name": "Custom Run Star Hike By You",
+      "description": "These Custom Run Star Hike By You shoes are the perfect addition to any wardrobe. Made from high-quality leather, they are both comfortable and durable. The sleek design is timeless, making them a versatile choice for any occasion. Pair them with jeans for a casual look or dress them up with a suit for a formal event.",
+      "category": "Men's Shoes",
+      "price": 89.99,
+      "oldPrice": 109.99,
+      "available": true,
+      "images": [
+        "https://secure-render.nike.com/ir/render/nikeidrender/RSHCanvasSU23_v3?obj=/s/g9&color=F4F6EF&show&obj=/s/g19&color=e1b05b&show&obj=/s/g11&color=F4F6EF&show&obj=/s/g10&color=F4F6EF&show&obj=/s/g14&color=7f5b42&show&obj=/s/g1/lat&color=A48D71&show&obj=/s/g2/med&color=A48D71&show&obj=/s/g3/heel&color=A48D71&show&obj=/s/g4/ton&color=A48D71&show&obj=/s/g15&color=7f5b42&show&obj=/s/g16&color=F4F6EF&show&obj=/s/g20/00a&show&obj=/s/g12&color=A48D71&show&obj=/s/g13/lace&color=F4F6EF&show&obj=/s&req=object&fmt=png-alpha&icc=AdobeRGB&wid=406",
+        "https://secure-render.nike.com/ir/render/nikeidrender/RSHCanvasSU23_v6?obj=/s/g9&color=F4F6EF&show&obj=/s/g19&color=e1b05b&show&obj=/s/g11&color=F4F6EF&show&obj=/s/g10&color=F4F6EF&show&obj=/s/g14&color=7f5b42&show&obj=/s/g1/lat&color=A48D71&show&obj=/s/g2/med&color=A48D71&show&obj=/s/g3/heel&color=A48D71&show&obj=/s/g4/ton&color=A48D71&show&obj=/s/g15&color=7f5b42&show&obj=/s/g16&color=F4F6EF&show&obj=/s/g20/00a&show&obj=/s/g12&color=A48D71&show&obj=/s/g13/lace&color=F4F6EF&show&obj=/s&req=object&fmt=png-alpha&icc=AdobeRGB&wid=406",
+        "https://secure-render.nike.com/ir/render/nikeidrender/RSHCanvasSU23_v5?obj=/s/g9&color=F4F6EF&show&obj=/s/g19&color=e1b05b&show&obj=/s/g11&color=F4F6EF&show&obj=/s/g10&color=F4F6EF&show&obj=/s/g14&color=7f5b42&show&obj=/s/g1/lat&color=A48D71&show&obj=/s/g2/med&color=A48D71&show&obj=/s/g3/heel&color=A48D71&show&obj=/s/g4/ton&color=A48D71&show&obj=/s/g15&color=7f5b42&show&obj=/s/g16&color=F4F6EF&show&obj=/s/g20/00a&show&obj=/s/g12&color=A48D71&show&obj=/s/g13/lace&color=F4F6EF&show&obj=/s&req=object&fmt=png-alpha&icc=AdobeRGB&wid=406"
+      ]
     },
     {
-      "name": "Adidas Superstar",
-      "price": "$85",
-      "available": "In stock",
-      "description": "The Adidas Superstar is a classic and iconic shoe, known for its distinctive shell toe and three stripes. It features a leather upper and a rubber outsole.",
-      "category": "Casual shoes",
-      "image": "img/product/p7.jpg"
+      "id": 11,
+      "name": "Nike Air Max 90",
+      "description": "The Nike Air Max 90 is a classic sneaker that has been around since the 1990s. It features a comfortable and supportive design that makes it perfect for everyday wear. The shoe is made with a durable leather upper and a cushioned sole for added comfort. Whether you're going for a run or just running errands, the Nike Air Max 90 is a great choice.",
+      "category": "Athletic Shoes",
+      "price": 99.99,
+      "oldPrice": 129.99,
+      "available": true,
+      "images": [
+        "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0f7693fa-355f-4ff5-ae7e-09e143d41ed3/air-max-90-mens-shoes-HFxBCQ.png",
+        "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/3a5f6aae-15e9-4896-8d9b-96a6f8cf5848/air-max-90-mens-shoes-HFxBCQ.png",
+        "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/0cf59bee-73b2-48e1-ac64-882d56e65be9/air-max-90-mens-shoes-HFxBCQ.png"
+      ]
     },
     {
-      "name": "Adidas Adizero Boston 10",
-      "price": "$140",
-      "available": "In stock",
-      "description": "The Adidas Adizero Boston 10 is a lightweight and responsive shoe, designed for fast-paced runs and races. It features a Boost midsole and a breathable mesh upper.",
-      "category": "Running shoes",
-      "image": "img/product/p8.jpg"
+      "id": 12,
+      "name": "Adidas Ultraboost",
+      "description": "The Adidas Ultraboost is a high-performance running shoe that is designed to provide maximum comfort and support. It features a breathable knit upper and a responsive Boost midsole that delivers energy return with every stride. The shoe also has a grippy outsole that provides traction on a variety of surfaces. Whether you're training for a race or just going for a jog, the Adidas Ultraboost has got you covered.",
+      "category": "Running Shoes",
+      "price": 149.99,
+      "oldPrice": 179.99,
+      "available": true,
+      "images": [
+        "https://assets.adidas.com/images/w_1880,f_auto,q_auto/b7f0f83b48f34b66af4dae6f017b1d90_9366/GY4408_01_standard.jpg",
+        "https://assets.adidas.com/images/w_1880,f_auto,q_auto/ab82728148fb4c72bdd4ae6f017b4173_9366/GY4408_04_standard.jpg",
+        "https://assets.adidas.com/images/w_1880,f_auto,q_auto/c5094d9e526b43699eb8ae6f017b4add_9366/GY4408_05_standard.jpg"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Puma Suede Classic",
+      "description": "The Puma Suede Classic is a retro-inspired sneaker that is perfect for everyday wear. It features a soft suede upper and a cushioned sole that provides all-day comfort. The shoe also has a classic design that pairs well with jeans or shorts. Whether you're hanging out with friends or running errands, the Puma Suede Classic is a stylish and comfortable choice.",
+      "category": "Casual Shoes",
+      "price": 79.99,
+      "oldPrice": 89.99,
+      "available": true,
+      "images": [
+        "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/374915/01/sv01/fnd/PNA/fmt/png/Suede-Classic-XXI-Men's-Sneakers",
+        "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_750,h_750/global/374915/01/bv/fnd/PNA/fmt/png/Suede-Classic-XXI-Men's-Sneakers",
+        "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/374915/01/fnd/PNA/fmt/png/Suede-Classic-XXI-Men's-Sneakers"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Converse Chuck Taylor All Star",
+      "description": "The Converse Chuck Taylor All Star is a classic sneaker that has been around since the 1920s. It features a canvas upper, a rubber toe cap and outsole, and a cushioned footbed for comfort. The Chuck Taylor All Star is available in a variety of colors and designs, making it a versatile shoe that can be worn with any outfit.",
+      "category": "Casual Shoes",
+      "price": 60,
+      "oldPrice": null,
+      "available": true,
+      "images": [
+        "https://www.converse.com/dw/image/v2/BCZC_PRD/on/demandware.static/-/Sites-cnv-master-catalog/default/dwb3bcf224/images/c_08/M9166_C_08X1.jpg?sw=406",
+        "https://www.converse.com/dw/image/v2/BCZC_PRD/on/demandware.static/-/Sites-cnv-master-catalog/default/dwdff2b5b7/images/e_08/M9166_E_08X1.jpg?sw=406",
+        "https://www.converse.com/dw/image/v2/BCZC_PRD/on/demandware.static/-/Sites-cnv-master-catalog/default/dw12efb957/images/g_08/M9166_G_08X1.jpg?sw=406"
+      ]
     }
   ],
-  "categories":[]
+  "categories": []
 }

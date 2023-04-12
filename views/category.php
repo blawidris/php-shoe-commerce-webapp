@@ -13,7 +13,7 @@ $products = getAllProduct();
 	<!-- Mobile Specific Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- Favicon-->
-	<link rel="shortcut icon" href="<?=ASSETS_PATH;?>img/fav.png">
+	<link rel="shortcut icon" href="<?= ASSETS_PATH; ?>img/fav.png">
 	<!-- Author Meta -->
 	<meta name="author" content="CodePixar">
 	<!-- Meta Description -->
@@ -26,48 +26,47 @@ $products = getAllProduct();
 	<title>Karma Shop</title>
 
 
-	<link rel="stylesheet" href="<?=ASSETS_PATH;?>css/linearicons.css">
-	<link rel="stylesheet" href="<?=ASSETS_PATH;?>css/font-awesome.min.css">
-	<link rel="stylesheet" href="<?=ASSETS_PATH;?>css/themify-icons.css">
-	<link rel="stylesheet" href="<?=ASSETS_PATH;?>css/bootstrap.css">
-	<link rel="stylesheet" href="<?=ASSETS_PATH;?>css/owl.carousel.css">
-	<link rel="stylesheet" href="<?=ASSETS_PATH;?>css/nice-select.css">
-	<link rel="stylesheet" href="<?=ASSETS_PATH;?>css/nouislider.min.css">
-	<link rel="stylesheet" href="<?=ASSETS_PATH;?>css/ion.rangeSlider.css" />
-	<link rel="stylesheet" href="<?=ASSETS_PATH;?>css/ion.rangeSlider.skinFlat.css" />
-	<link rel="stylesheet" href="<?=ASSETS_PATH;?>css/magnific-popup.css">
-	<link rel="stylesheet" href="<?=ASSETS_PATH;?>css/main.css">
+	<link rel="stylesheet" href="<?= ASSETS_PATH; ?>css/linearicons.css">
+	<link rel="stylesheet" href="<?= ASSETS_PATH; ?>css/font-awesome.min.css">
+	<link rel="stylesheet" href="<?= ASSETS_PATH; ?>css/themify-icons.css">
+	<link rel="stylesheet" href="<?= ASSETS_PATH; ?>css/bootstrap.css">
+	<link rel="stylesheet" href="<?= ASSETS_PATH; ?>css/owl.carousel.css">
+	<link rel="stylesheet" href="<?= ASSETS_PATH; ?>css/nice-select.css">
+	<link rel="stylesheet" href="<?= ASSETS_PATH; ?>css/nouislider.min.css">
+	<link rel="stylesheet" href="<?= ASSETS_PATH; ?>css/ion.rangeSlider.css" />
+	<link rel="stylesheet" href="<?= ASSETS_PATH; ?>css/ion.rangeSlider.skinFlat.css" />
+	<link rel="stylesheet" href="<?= ASSETS_PATH; ?>css/magnific-popup.css">
+	<link rel="stylesheet" href="<?= ASSETS_PATH; ?>css/main.css">
 </head>
 
 <body>
 
-<?php 
-	
-	include_once './partials/header.php'; 
+	<?php
+
+	include_once './partials/header.php';
 	$data = [
 		'pageTitle' => 'Shop',
 		'subtitle' => 'Product Categories',
 		'link' => 'category.php'
 	];
-	
+
 	/**
 	 * @return array $data
 	 */
-	
-	 // banner
+
+	// banner
 	include_once './partials/banner.php';
 
-?>
+	?>
 
-	
+
 	<div class="container">
 		<div class="row">
 			<div class="col-xl-3 col-lg-4 col-md-5">
 				<div class="sidebar-categories">
 					<div class="head">Browse Categories</div>
 					<ul class="main-categories">
-						<li class="main-nav-list"><a data-toggle="collapse" href="#fruitsVegetable" aria-expanded="false" aria-controls="fruitsVegetable"><span
-								 class="lnr lnr-arrow-right"></span>Fruits and Vegetables<span class="number">(53)</span></a>
+						<li class="main-nav-list"><a data-toggle="collapse" href="#fruitsVegetable" aria-expanded="false" aria-controls="fruitsVegetable"><span class="lnr lnr-arrow-right"></span>Fruits and Vegetables<span class="number">(53)</span></a>
 							<ul class="collapse" id="fruitsVegetable" data-toggle="collapse" aria-expanded="false" aria-controls="fruitsVegetable">
 								<li class="main-nav-list child"><a href="#">Frozen Fish<span class="number">(13)</span></a></li>
 								<li class="main-nav-list child"><a href="#">Dried Fish<span class="number">(09)</span></a></li>
@@ -77,8 +76,7 @@ $products = getAllProduct();
 							</ul>
 						</li>
 
-						<li class="main-nav-list"><a data-toggle="collapse" href="#meatFish" aria-expanded="false" aria-controls="meatFish"><span
-								 class="lnr lnr-arrow-right"></span>Meat and Fish<span class="number">(53)</span></a>
+						<li class="main-nav-list"><a data-toggle="collapse" href="#meatFish" aria-expanded="false" aria-controls="meatFish"><span class="lnr lnr-arrow-right"></span>Meat and Fish<span class="number">(53)</span></a>
 							<ul class="collapse" id="meatFish" data-toggle="collapse" aria-expanded="false" aria-controls="meatFish">
 								<li class="main-nav-list child"><a href="#">Frozen Fish<span class="number">(13)</span></a></li>
 								<li class="main-nav-list child"><a href="#">Dried Fish<span class="number">(09)</span></a></li>
@@ -87,8 +85,7 @@ $products = getAllProduct();
 								<li class="main-nav-list child"><a href="#">Meat<span class="number">(11)</span></a></li>
 							</ul>
 						</li>
-						<li class="main-nav-list"><a data-toggle="collapse" href="#cooking" aria-expanded="false" aria-controls="cooking"><span
-								 class="lnr lnr-arrow-right"></span>Cooking<span class="number">(53)</span></a>
+						<li class="main-nav-list"><a data-toggle="collapse" href="#cooking" aria-expanded="false" aria-controls="cooking"><span class="lnr lnr-arrow-right"></span>Cooking<span class="number">(53)</span></a>
 							<ul class="collapse" id="cooking" data-toggle="collapse" aria-expanded="false" aria-controls="cooking">
 								<li class="main-nav-list child"><a href="#">Frozen Fish<span class="number">(13)</span></a></li>
 								<li class="main-nav-list child"><a href="#">Dried Fish<span class="number">(09)</span></a></li>
@@ -97,8 +94,7 @@ $products = getAllProduct();
 								<li class="main-nav-list child"><a href="#">Meat<span class="number">(11)</span></a></li>
 							</ul>
 						</li>
-						<li class="main-nav-list"><a data-toggle="collapse" href="#beverages" aria-expanded="false" aria-controls="beverages"><span
-								 class="lnr lnr-arrow-right"></span>Beverages<span class="number">(24)</span></a>
+						<li class="main-nav-list"><a data-toggle="collapse" href="#beverages" aria-expanded="false" aria-controls="beverages"><span class="lnr lnr-arrow-right"></span>Beverages<span class="number">(24)</span></a>
 							<ul class="collapse" id="beverages" data-toggle="collapse" aria-expanded="false" aria-controls="beverages">
 								<li class="main-nav-list child"><a href="#">Frozen Fish<span class="number">(13)</span></a></li>
 								<li class="main-nav-list child"><a href="#">Dried Fish<span class="number">(09)</span></a></li>
@@ -107,8 +103,7 @@ $products = getAllProduct();
 								<li class="main-nav-list child"><a href="#">Meat<span class="number">(11)</span></a></li>
 							</ul>
 						</li>
-						<li class="main-nav-list"><a data-toggle="collapse" href="#homeClean" aria-expanded="false" aria-controls="homeClean"><span
-								 class="lnr lnr-arrow-right"></span>Home and Cleaning<span class="number">(53)</span></a>
+						<li class="main-nav-list"><a data-toggle="collapse" href="#homeClean" aria-expanded="false" aria-controls="homeClean"><span class="lnr lnr-arrow-right"></span>Home and Cleaning<span class="number">(53)</span></a>
 							<ul class="collapse" id="homeClean" data-toggle="collapse" aria-expanded="false" aria-controls="homeClean">
 								<li class="main-nav-list child"><a href="#">Frozen Fish<span class="number">(13)</span></a></li>
 								<li class="main-nav-list child"><a href="#">Dried Fish<span class="number">(09)</span></a></li>
@@ -118,8 +113,7 @@ $products = getAllProduct();
 							</ul>
 						</li>
 						<li class="main-nav-list"><a href="#">Pest Control<span class="number">(24)</span></a></li>
-						<li class="main-nav-list"><a data-toggle="collapse" href="#officeProduct" aria-expanded="false" aria-controls="officeProduct"><span
-								 class="lnr lnr-arrow-right"></span>Office Products<span class="number">(77)</span></a>
+						<li class="main-nav-list"><a data-toggle="collapse" href="#officeProduct" aria-expanded="false" aria-controls="officeProduct"><span class="lnr lnr-arrow-right"></span>Office Products<span class="number">(77)</span></a>
 							<ul class="collapse" id="officeProduct" data-toggle="collapse" aria-expanded="false" aria-controls="officeProduct">
 								<li class="main-nav-list child"><a href="#">Frozen Fish<span class="number">(13)</span></a></li>
 								<li class="main-nav-list child"><a href="#">Dried Fish<span class="number">(09)</span></a></li>
@@ -128,8 +122,7 @@ $products = getAllProduct();
 								<li class="main-nav-list child"><a href="#">Meat<span class="number">(11)</span></a></li>
 							</ul>
 						</li>
-						<li class="main-nav-list"><a data-toggle="collapse" href="#beauttyProduct" aria-expanded="false" aria-controls="beauttyProduct"><span
-								 class="lnr lnr-arrow-right"></span>Beauty Products<span class="number">(65)</span></a>
+						<li class="main-nav-list"><a data-toggle="collapse" href="#beauttyProduct" aria-expanded="false" aria-controls="beauttyProduct"><span class="lnr lnr-arrow-right"></span>Beauty Products<span class="number">(65)</span></a>
 							<ul class="collapse" id="beauttyProduct" data-toggle="collapse" aria-expanded="false" aria-controls="beauttyProduct">
 								<li class="main-nav-list child"><a href="#">Frozen Fish<span class="number">(13)</span></a></li>
 								<li class="main-nav-list child"><a href="#">Dried Fish<span class="number">(09)</span></a></li>
@@ -138,8 +131,7 @@ $products = getAllProduct();
 								<li class="main-nav-list child"><a href="#">Meat<span class="number">(11)</span></a></li>
 							</ul>
 						</li>
-						<li class="main-nav-list"><a data-toggle="collapse" href="#healthProduct" aria-expanded="false" aria-controls="healthProduct"><span
-								 class="lnr lnr-arrow-right"></span>Health Products<span class="number">(29)</span></a>
+						<li class="main-nav-list"><a data-toggle="collapse" href="#healthProduct" aria-expanded="false" aria-controls="healthProduct"><span class="lnr lnr-arrow-right"></span>Health Products<span class="number">(29)</span></a>
 							<ul class="collapse" id="healthProduct" data-toggle="collapse" aria-expanded="false" aria-controls="healthProduct">
 								<li class="main-nav-list child"><a href="#">Frozen Fish<span class="number">(13)</span></a></li>
 								<li class="main-nav-list child"><a href="#">Dried Fish<span class="number">(09)</span></a></li>
@@ -149,8 +141,7 @@ $products = getAllProduct();
 							</ul>
 						</li>
 						<li class="main-nav-list"><a href="#">Pet Care<span class="number">(29)</span></a></li>
-						<li class="main-nav-list"><a data-toggle="collapse" href="#homeAppliance" aria-expanded="false" aria-controls="homeAppliance"><span
-								 class="lnr lnr-arrow-right"></span>Home Appliances<span class="number">(15)</span></a>
+						<li class="main-nav-list"><a data-toggle="collapse" href="#homeAppliance" aria-expanded="false" aria-controls="homeAppliance"><span class="lnr lnr-arrow-right"></span>Home Appliances<span class="number">(15)</span></a>
 							<ul class="collapse" id="homeAppliance" data-toggle="collapse" aria-expanded="false" aria-controls="homeAppliance">
 								<li class="main-nav-list child"><a href="#">Frozen Fish<span class="number">(13)</span></a></li>
 								<li class="main-nav-list child"><a href="#">Dried Fish<span class="number">(09)</span></a></li>
@@ -159,8 +150,7 @@ $products = getAllProduct();
 								<li class="main-nav-list child"><a href="#">Meat<span class="number">(11)</span></a></li>
 							</ul>
 						</li>
-						<li class="main-nav-list"><a class="border-bottom-0" data-toggle="collapse" href="#babyCare" aria-expanded="false"
-							 aria-controls="babyCare"><span class="lnr lnr-arrow-right"></span>Baby Care<span class="number">(48)</span></a>
+						<li class="main-nav-list"><a class="border-bottom-0" data-toggle="collapse" href="#babyCare" aria-expanded="false" aria-controls="babyCare"><span class="lnr lnr-arrow-right"></span>Baby Care<span class="number">(48)</span></a>
 							<ul class="collapse" id="babyCare" data-toggle="collapse" aria-expanded="false" aria-controls="babyCare">
 								<li class="main-nav-list child"><a href="#">Frozen Fish<span class="number">(13)</span></a></li>
 								<li class="main-nav-list child"><a href="#">Dried Fish<span class="number">(09)</span></a></li>
@@ -220,19 +210,19 @@ $products = getAllProduct();
 				<div class="filter-bar d-flex flex-wrap align-items-center justify-content-between">
 					<div class="sorting">
 						<select>
-							<option value="1">Default sorting</option>
-							<option value="1">Default sorting</option>
-							<option value="1">Default sorting</option>
+							<option value="asending">A - Z</option>
+							<option value="decending">Z - A</option>
+							<option value="price">Price</option>
 						</select>
 					</div>
 					<div class="sorting ml-auto">
 						<select>
-							<option value="1">Show 12</option>
-							<option value="1">Show 12</option>
-							<option value="1">Show 12</option>
+							<option value="1">Show 10</option>
+							<option value="1">Show 20</option>
+							<option value="1">Show 30</option>
 						</select>
 					</div>
-					
+
 				</div>
 				<!-- End Filter Bar -->
 				<!-- Start Best Seller -->
@@ -240,27 +230,26 @@ $products = getAllProduct();
 					<div class="row">
 						<!-- single product -->
 						<?php foreach ($products as $key => $item) {
-						/** 
-						 * @return array $item 
-						 * @return int $key
-						 */
+							/** 
+							 * @return array $item 
+							 */
 
-						include 'components/product-cat-item.php';
-					}
-					?>
-						
+							include 'components/product-cat-item.php';
+						}
+						?>
+
 					</div>
 				</section>
 				<!-- End Best Seller -->
 				<!-- Start Filter Bar -->
-				<div class="filter-bar d-flex flex-wrap align-items-center">
-					<div class="sorting mr-auto">
+				<div class="filter-bar d-flex flex-wrap align-items-center ">
+					<!-- <div class="sorting mr-auto">
 						<select>
 							<option value="1">Show 12</option>
 							<option value="1">Show 12</option>
 							<option value="1">Show 12</option>
 						</select>
-					</div>
+					</div> -->
 					<div class="pagination">
 						<a href="#" class="prev-arrow"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></a>
 						<a href="#" class="active">1</a>
@@ -346,5 +335,51 @@ $products = getAllProduct();
 	<!-- start footer Area -->
 	<?php include_once './partials/footer.php'; ?>
 	<!-- End footer Area -->
+
+	<script>
+		const addBtn = document.querySelectorAll('#addToCart');
+
+		addBtn.forEach((element, index) => {
+			element.addEventListener('click', function(e) {
+				e.preventDefault();
+
+				let productId = this.getAttribute('data-id');
+				let productName = this.getAttribute('data-name');
+				let productPrice = this.getAttribute('data-price');
+				let productImage = this.getAttribute('data-image');
+				let productQuantity = this.getAttribute('data-quantity');
+
+				let obj = {
+					id: productId,
+					name: productName,
+					price: productPrice,
+					image: productImage,
+					quantity: productQuantity,
+				}
+
+				$.ajax({
+					url: '<?= CONTROLLER_PATH ?>add_cart.php',
+					type: 'POST',
+					data: {
+						cart: JSON.stringify(obj)
+					},
+					success: function(response) {
+
+						let cartCount = document.querySelector('.cart .count');
+
+						if (response.status == 200) {
+							// console.log(response);
+							cartCount.innerHTML = response.total_item;
+							alert('item added to cart');
+						}
+
+
+					}
+				});
+
+			})
+		})
+	</script>
 </body>
+
 </html>

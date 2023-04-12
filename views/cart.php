@@ -1,6 +1,11 @@
 <?php
 
+session_start();
 include_once dirname(__DIR__) . '/config/bootstrap.php';
+
+$cartItem = $_SESSION['cart_item'];
+
+// var_dump($cartItem);
 
 ?>
 
@@ -72,114 +77,65 @@ include_once dirname(__DIR__) . '/config/bootstrap.php';
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>
-                                    <div class="media">
-                                        <div class="d-flex">
-                                            <img src="img/cart.jpg" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <p>Minimalistic shop for multipurpose use</p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <h5>$360.00</h5>
-                                </td>
-                                <td>
-                                    <div class="product_count">
-                                        <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:" class="input-text qty">
-                                        <button class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
-                                        <button class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
-                                    </div>
-                                </td>
-                                <td>
-                                    <h5>$720.00</h5>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="media">
-                                        <div class="d-flex">
-                                            <img src="img/cart.jpg" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <p>Minimalistic shop for multipurpose use</p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <h5>$360.00</h5>
-                                </td>
-                                <td>
-                                    <div class="product_count">
-                                        <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:" class="input-text qty">
-                                        <button class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
-                                        <button class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></buttonp;>
-                                    </div>
-                                </td>
-                                <td>
-                                    <h5>$720.00</h5>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="media">
-                                        <div class="d-flex">
-                                            <img src="img/cart.jpg" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <p>Minimalistic shop for multipurpose use</p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <h5>$360.00</h5>
-                                </td>
-                                <td>
-                                    <div class="product_count">
-                                        <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:" class="input-text qty">
-                                        <button class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
-                                        <button class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
-                                    </div>
-                                </td>
-                                <td>
-                                    <h5>$720.00</h5>
-                                </td>
-                            </tr>
-                            <tr class="bottom_button">
-                                <td>
-                                    <a class="gray_btn" href="#">Update Cart</a>
-                                </td>
-                                <td>
 
-                                </td>
-                                <td>
+                            <?php
 
-                                </td>
-                                <td>
-                                    <div class="cupon_text d-flex align-items-center">
-                                        <input type="text" placeholder="Coupon Code">
-                                        <a class="primary-btn" href="#">Apply</a>
-                                        <a class="gray_btn" href="#">Close Coupon</a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
 
-                                </td>
-                                <td>
+                            if (empty($cartItem)) {
+                                echo "<tr><td colspan='4'><center><h3 class='mb-3 text-muted'>Empty Shopping Cart </h3><a class='gray_btn w-25 rounded' href='category.php'>Shop now</a></center></td></tr>";
+                            } else {
 
-                                </td>
-                                <td>
-                                    <h5>Subtotal</h5>
-                                </td>
-                                <td>
-                                    <h5>$2160.00</h5>
-                                </td>
-                            </tr>
-                            <tr class="shipping_area">
+                                $subtotal = 0;
+
+                                foreach ($cartItem as $item) {
+                                    /**
+                                     * @return $item
+                                     */
+
+                                    $subtotal += $item['price'] * $item['quantity'];
+                                    include 'components/cart_item.php';
+                                }
+                            }
+
+                            ?>
+
+
+
+                            <?php if (!empty($cartItem)) : ?>
+
+                                <tr class="bottom_button">
+                                    <td>
+                                        <a class="gray_btn" href="#">Update Cart</a>
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <!-- <td>
+
+                                </td> -->
+                                    <td colspan="2">
+                                        <div class="cupon_text d-flex align-items-center justify-content-end">
+                                            <input type="text" placeholder="Coupon Code">
+                                            <a class="primary-btn" href="#">Apply</a>
+                                            <a class="gray_btn" href="#">Close Coupon</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td>
+                                        <h5>Subtotal</h5>
+                                    </td>
+                                    <td>
+                                        <h5>$<?= $subtotal ?></h5>
+                                    </td>
+                                </tr>
+                                <!-- <tr class="shipping_area">
                                 <td>
 
                                 </td>
@@ -212,24 +168,25 @@ include_once dirname(__DIR__) . '/config/bootstrap.php';
                                         <a class="gray_btn" href="#">Update Details</a>
                                     </div>
                                 </td>
-                            </tr>
-                            <tr class="out_button_area">
-                                <td>
+                            </tr> -->
+                                <tr class="out_button_area">
+                                    <td>
 
-                                </td>
-                                <td>
+                                    </td>
+                                    <td>
 
-                                </td>
-                                <td>
+                                    </td>
+                                    <!-- <td>
 
-                                </td>
-                                <td>
-                                    <div class="checkout_btn_inner d-flex align-items-center">
-                                        <a class="gray_btn" href="#">Continue Shopping</a>
-                                        <a class="primary-btn" href="#">Proceed to checkout</a>
-                                    </div>
-                                </td>
-                            </tr>
+                                </td> -->
+                                    <td colspan="2">
+                                        <div class="checkout_btn_inner d-flex align-items-center justify-content-end">
+                                            <a class="gray_btn" href="category.php">Continue Shopping</a>
+                                            <a class="primary-btn" href="checkout.php">Proceed to checkout</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            <?php endif; ?>
                         </tbody>
                     </table>
                 </div>
@@ -246,32 +203,40 @@ include_once dirname(__DIR__) . '/config/bootstrap.php';
 
         let newQty = 1;
 
-        console.log(increaseItemBtn)
+        // console.log(increaseItemBtn)
 
 
         // increase
-        increaseItemBtn.foreach((elem, index) => {
-            elem.addEventListener('click', (e) => {
-                e.preventDefault()
+        // increaseItemBtn.foreach((elem, index) => {
+        //     console.log('click')
 
-                if (qtyValue.value >= 1) {
+        //     elem.addEventListener('click', (e) => {
+        //         e.preventDefault()
+
+
+        // if (qtyValue.value >= 1) {
+        //     qtyValue.value++;
+
+        //     newQty = parseInt(qtyValue.value);
+        // }
+        // });
+        // })
+
+        reduceItemBtn.forEach(element => {
+            // console.log(element)
+
+            element.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                if (qtyValue.value > 1) {
                     qtyValue.value++;
 
-                    newQty = parseInt(qtyValue.value);
+                    qtyValue.value = parseInt(qtyValue.value);
+
+
                 }
-            });
-        })
-
-        // reduceItemBtn.addEventListener('click', (e) => {
-        //     e.preventDefault()
-
-        //     if (qtyValue.value > 1) {
-        //         qtyValue.value--;
-
-        //         newQty = parseInt(qtyValue.value);
-
-        //     }
-        // })
+            })
+        });
     </script>
     <?php include_once './partials/footer.php'; ?>
 
