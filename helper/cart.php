@@ -2,11 +2,8 @@
 
 declare(strict_types=1);
 
-// $_SESSION['cart_item'] = array();
-
 function addItem($data)
 {
-    // global $itemArray;
 
     $itemArray = array();
 
@@ -50,7 +47,7 @@ function addItem($data)
     header('Content-Type: application/json');
     header('Access-Control-Allow-Methods: POST');
     header('Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,Access-Control-Allow-Methods, Authorization, X-Requested-With');
-    echo json_encode(['status' => 200, 'total_item' => count($_SESSION['cart_item'])]);
+    echo json_encode(['status' => 200, 'total_item' => count($_SESSION['cart_item']), 'item' => $_SESSION['cart_item']]);
 }
 
 

@@ -16,7 +16,7 @@
 						 	data-name="<?= $item->name; ?>" 
 							data-quantity="1" data-image="<?= $item->images[0]; ?>"
 							data-price="<?= $item->price; ?>" 
-							data-id="<?= $key; ?>">
+							data-id="<?= $item->id; ?>">
 							add to bag
 						</p>
 					</a>

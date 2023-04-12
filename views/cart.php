@@ -199,40 +199,70 @@ $cartItem = $_SESSION['cart_item'];
     <script>
         let increaseItemBtn = document.querySelectorAll('.product_count .increase')
         let reduceItemBtn = document.querySelectorAll('.product_count .reduced')
-        let qtyValue = document.querySelector('.product_count .qty');
-
-        let newQty = 1;
-
-        // console.log(increaseItemBtn)
-
+        let newValue = null;
 
         // increase
-        // increaseItemBtn.foreach((elem, index) => {
-        //     console.log('click')
 
-        //     elem.addEventListener('click', (e) => {
-        //         e.preventDefault()
+        increaseItemBtn.forEach(element => {
+            element.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                let qtyValue = this.parentElement.firstElementChild;
+                let productId = this.getAttribute('data-id');
+
+                // console.log(qtyValue.value)
+                if (qtyValue.value >= 1) {
+                    qtyValue.value++;
+                    newValue = qtyValue.value = parseInt(qtyValue.value);
+
+                    console.log(newValue)
+
+                    let obj = {
+                        id: productId,
+                        quantity: newValue,
+                    }
+
+                    $.ajax({
+                        url: '<?= CONTROLLER_PATH ?>add_cart.php',
+                        type: 'POST',
+                        data: {
+                            cart: JSON.stringify(obj)
+                        },
+                        success: function(response) {
+
+                            let cartCount = document.querySelector('.cart .count');
+
+                            if (response.status == 200) {
+                                // console.log(response);
+                                alert('item added to cart');
+                                cartCount.innerHTML = response.total_item;
+                                console.log(response.item)
+                            }
+                        }
+                    });
+
+                }
+
+            })
+
+        })
 
 
-        // if (qtyValue.value >= 1) {
-        //     qtyValue.value++;
 
-        //     newQty = parseInt(qtyValue.value);
-        // }
-        // });
-        // })
-
+        // decrease
         reduceItemBtn.forEach(element => {
             // console.log(element)
 
             element.addEventListener('click', function(e) {
                 e.preventDefault();
 
+                let qtyValue = this.parentElement.firstElementChild;
+
+                // console.log(qtyValue.value)
                 if (qtyValue.value > 1) {
-                    qtyValue.value++;
+                    qtyValue.value--;
 
                     qtyValue.value = parseInt(qtyValue.value);
-
 
                 }
             })

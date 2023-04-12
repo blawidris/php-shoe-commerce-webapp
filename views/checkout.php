@@ -1,6 +1,8 @@
 <?php
 
-include_once dirname(__DIR__).'/config/bootstrap.php';
+session_start();
+include_once dirname(__DIR__) . '/config/bootstrap.php';
+$cartItem = $_SESSION['cart_item'];
 
 ?>
 
@@ -8,40 +10,40 @@ include_once dirname(__DIR__).'/config/bootstrap.php';
 <html lang="zxx" class="no-js">
 
 <head>
-   <!-- Mobile Specific Meta -->
-   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   <!-- Favicon-->
-   <link rel="shortcut icon" href="<?=ASSETS_PATH;?>img/fav.png">
-   <!-- Author Meta -->
-   <meta name="author" content="CodePixar">
-   <!-- Meta Description -->
-   <meta name="description" content="">
-   <!-- Meta Keyword -->
-   <meta name="keywords" content="">
-   <!-- meta character set -->
-   <meta charset="UTF-8">
-   <!-- Site Title -->
-   <title>Karma Shop</title>
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="<?= ASSETS_PATH; ?>img/fav.png">
+    <!-- Author Meta -->
+    <meta name="author" content="CodePixar">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>Karma Shop</title>
 
 
-   <link rel="stylesheet" href="<?=ASSETS_PATH;?>css/linearicons.css">
-   <link rel="stylesheet" href="<?=ASSETS_PATH;?>css/font-awesome.min.css">
-   <link rel="stylesheet" href="<?=ASSETS_PATH;?>css/themify-icons.css">
-   <link rel="stylesheet" href="<?=ASSETS_PATH;?>css/bootstrap.css">
-   <link rel="stylesheet" href="<?=ASSETS_PATH;?>css/owl.carousel.css">
-   <link rel="stylesheet" href="<?=ASSETS_PATH;?>css/nice-select.css">
-   <link rel="stylesheet" href="<?=ASSETS_PATH;?>css/nouislider.min.css">
-   <link rel="stylesheet" href="<?=ASSETS_PATH;?>css/ion.rangeSlider.css" />
-   <link rel="stylesheet" href="<?=ASSETS_PATH;?>css/ion.rangeSlider.skinFlat.css" />
-   <link rel="stylesheet" href="<?=ASSETS_PATH;?>css/magnific-popup.css">
-   <link rel="stylesheet" href="<?=ASSETS_PATH;?>css/main.css">
+    <link rel="stylesheet" href="<?= ASSETS_PATH; ?>css/linearicons.css">
+    <link rel="stylesheet" href="<?= ASSETS_PATH; ?>css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?= ASSETS_PATH; ?>css/themify-icons.css">
+    <link rel="stylesheet" href="<?= ASSETS_PATH; ?>css/bootstrap.css">
+    <link rel="stylesheet" href="<?= ASSETS_PATH; ?>css/owl.carousel.css">
+    <link rel="stylesheet" href="<?= ASSETS_PATH; ?>css/nice-select.css">
+    <link rel="stylesheet" href="<?= ASSETS_PATH; ?>css/nouislider.min.css">
+    <link rel="stylesheet" href="<?= ASSETS_PATH; ?>css/ion.rangeSlider.css" />
+    <link rel="stylesheet" href="<?= ASSETS_PATH; ?>css/ion.rangeSlider.skinFlat.css" />
+    <link rel="stylesheet" href="<?= ASSETS_PATH; ?>css/magnific-popup.css">
+    <link rel="stylesheet" href="<?= ASSETS_PATH; ?>css/main.css">
 </head>
 
 <body>
-    
+
     <!-- start header Area -->
-	<?php include_once './partials/header.php'; ?>
-	<!-- End header Area -->
+    <?php include_once './partials/header.php'; ?>
+    <!-- End header Area -->
 
     <!-- Start Banner Area -->
     <section class="banner-area organic-breadcrumb">
@@ -168,14 +170,26 @@ include_once dirname(__DIR__).'/config/bootstrap.php';
                             <h2>Your Order</h2>
                             <ul class="list">
                                 <li><a href="#">Product <span>Total</span></a></li>
-                                <li><a href="#">Fresh Blackberry <span class="middle">x 02</span> <span class="last">$720.00</span></a></li>
-                                <li><a href="#">Fresh Tomatoes <span class="middle">x 02</span> <span class="last">$720.00</span></a></li>
-                                <li><a href="#">Fresh Brocoli <span class="middle">x 02</span> <span class="last">$720.00</span></a></li>
+                                <?php
+                                $subtotal = 0;
+
+                                foreach ($cartItem as $item) {
+                                    /**
+                                     * @return $item
+                                     */
+
+                                    $subtotal += $item['price'] * $item['quantity'];
+
+                                    include 'components/checkout_item.php';
+                                }
+
+                                ?>
+
                             </ul>
                             <ul class="list list_2">
-                                <li><a href="#">Subtotal <span>$2160.00</span></a></li>
+                                <li><a href="#">Subtotal <span>$<?=$subtotal?></span></a></li>
                                 <li><a href="#">Shipping <span>Flat rate: $50.00</span></a></li>
-                                <li><a href="#">Total <span>$2210.00</span></a></li>
+                                <li><a href="#">Total <span>$<?= $subtotal + 50.00?></span></a></li>
                             </ul>
                             <div class="payment_item">
                                 <div class="radion_btn">
@@ -210,8 +224,9 @@ include_once dirname(__DIR__).'/config/bootstrap.php';
     </section>
     <!--================End Checkout Area =================-->
 
-	<!-- start footer Area -->
-	<?php include_once './partials/footer.php'; ?>
-	<!-- End footer Area -->
+    <!-- start footer Area -->
+    <?php include_once './partials/footer.php'; ?>
+    <!-- End footer Area -->
 </body>
+
 </html>

@@ -12,7 +12,7 @@
 
 					<a href="javascript:void(0)" class="social-info">
 						<span class="ti-bag"></span>
-						<p class="hover-text" id="addToCart" data-name="<?= $item->name; ?>" data-quantity="1" data-image="<?= $item->images[0]; ?>" data-price="<?= $item->price; ?>" data-id="<?= $key; ?>">add to bag</p>
+						<p class="hover-text" id="addToCart" data-name="<?= $item->name; ?>" data-quantity="1" data-image="<?= $item->images[0]; ?>" data-price="<?= $item->price; ?>" data-id="<?= $item->id; ?>">add to bag</p>
 					</a>
 					<a href="" class="social-info">
 						<span class="lnr lnr-heart"></span>
