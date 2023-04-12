@@ -202,7 +202,6 @@ $cartItem = $_SESSION['cart_item'];
         let newValue = null;
 
         // increase
-
         increaseItemBtn.forEach(element => {
             element.addEventListener('click', function(e) {
                 e.preventDefault();
